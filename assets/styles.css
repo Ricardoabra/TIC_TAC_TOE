@@ -1,25 +1,62 @@
-#container{
-    width: 500px;
-    height: 500px;
+body{
+    margin: 0;
+    padding: 0;
     display: flex;
-    background-image: linear-gradient(to right, rgb(175, 162, 162), rgb(78, 4, 78));
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    margin: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2px;
-    padding: 20px;
-    outline: none;
-    
+    height: 100vh;
+    flex-direction: column;
 }
 
-.botoes{
-    width: 145px;
-    height: 145px;
+#tabuleiro{
+    width: 300px;
+    height: 300px;
+    background-color: black;
     display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
     background-color: white;
-    align-items: center;
+    border: solid 2px black;
+    box-sizing: border-box  ;
+    display: flex;
     justify-content: center;
-    margin: auto;
+    align-items: center;
+}
+
+.circle{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+}
+
+.cross{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.cross:before, .cross:after{
+    content:"";
+    position:absolute;
+    background-color: red;
+}
+
+.cross:before{
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+.cross:after{
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
 }
