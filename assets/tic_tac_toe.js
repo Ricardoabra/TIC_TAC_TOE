@@ -48,6 +48,12 @@ const tic_tac_toe = {
         console.log("GAME OVER");
     },
 
+    start: function () {
+        this.board.fill('');
+        this.draw();
+        this.gameover = false;
+    },
+
     check_winning_sequences:function(simbol){
         for(i in this.winning_sequences){
             if (this.board[this.winning_sequences[i][0] ]==simbol &&
