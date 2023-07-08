@@ -7,9 +7,11 @@
     <title>Jogo da Velha</title>
 </head>
 <body>
-    <div id="tabuleiro"><div>
-    <p id="info"></p>   
-    </div>
-    <script src="assets/script.js"></script>
+    <div class="game" ></div>
+    <script src="assets/tic_tac_toe.js"></script>
+    <script>
+        tic_tac_toe.init(document.querySelector('.game'));
+        tic_tac_toe.draw();
+    </script>
 </body>
 </html>
