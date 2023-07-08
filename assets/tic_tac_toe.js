@@ -23,6 +23,7 @@ const tic_tac_toe = {
 
     init: function(container){
         this.container_element = container;
+        
     },
 
     make_play: function(position){
@@ -73,5 +74,6 @@ const tic_tac_toe = {
         }
         this.container_element.innerHTML = content;
     },
+
 
 };
